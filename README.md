@@ -35,5 +35,5 @@ result = [ "this is a description", "this is why we speak", \
            "that is what I said", "those are my pictures" ] 
 ```
 
-It was clarified users input is given batched; not streamed. What does this mean? *Receive all user input into a variable, and locate all phrases which begin with the input.
+It was clarified users input is given batched; not streamed. What does this mean? *Receive all user input into a variable, and locate all phrases which begin with the input.*
 
