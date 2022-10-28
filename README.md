@@ -41,9 +41,9 @@ It was clarified users input is given batched; not streamed. What does this mean
 
 Since I don't have the interviewer in front of me, let's make my own assumptions (for the sake of simplicity)
 
-One way of solving this would be to search the first word of every phrase against our input string. This would be a O(n) time complexity, for every search we initiate. If we search for "th", this would be a O(n) search through the entire list_of_phrases.
+One solution would be to search the first word of every phrase against our input string. This would be a O(n) time complexity, for every search we initiate. If we search for "th", this would be a O(n) search through the entire list_of_phrases. Again, this is not using a "trie" ds.
 
-Let's take the idea of "trie" data structure. I'll assume we can take the first word of every phrase, store it in the trie, and it would look similar to this (given our assumption and our list_of_phrases):
+Okay, let's take the idea of "trie" data structure. I'll assume we can take the first word of every phrase, store it in the trie, and it would look similar to this (given our assumption and our list_of_phrases):
 
 ```
 
@@ -103,3 +103,4 @@ valid_phrase_indices: [4]
 
 When I take a step back, I notice something interesting: as you're closer to [root], the set of indices is larger. As you're farther from [root], you're set becomes smaller. In other words, the searching list_of_phrases becomes smaller as your move farther from [root]. This makes sense, as your searching and creating subsets as your traverse this trie.
 
+***more to come; I'll be adding more information, and will code up a solution***
