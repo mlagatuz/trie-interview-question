@@ -29,5 +29,7 @@ class Trie():
             index = ord(key[level]) - ord('a')
             if not node.children[index]:
                 return False
+            if (level + 1) == key_length:
+                return True
             node = node.children[index]
         return node.is_word_end
