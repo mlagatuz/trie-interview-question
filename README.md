@@ -1,5 +1,9 @@
 # trie-interview-question
 
+***UPDATE***
+
+***Apparently my logic and algorithm doesn't quite work! While coding something up, I found an edge case which breaks my logic! My Trie class can locate "this", "that", "those" pathways; it fails if I give "tho" as an input. Let me rethink this out***
+
 ## Motivation
 
 During a coding round, I was asked a question about the data structure "trie". As the interviewer detailed the question on the whiteboard, I recognized a "trie" would be an appropriate ds to use. While I struggled with the answer during the interview, I knew I needed to attempt and complete the problem on my own. It's a work in progress, while I continue to study, code, and practice.
