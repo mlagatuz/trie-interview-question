@@ -31,19 +31,3 @@ class Trie():
                 return False
             node = node.children[index]
         return node.is_word_end
-
-def main():
-    input = ["this", "that", "those", "is", "a", "word"]
-
-    words = Trie()
-
-    for word in input:
-        words.insert(word)
-    
-    if words.search("why"):
-        print("FOUND")
-    else:
-        print("NOT FOUND")
-
-if __name__ == '__main__':
-    main()
