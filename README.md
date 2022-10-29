@@ -2,7 +2,7 @@
 
 ***UPDATE***
 
-***Apparently my logic and algorithm doesn't quite work! While coding something up, I found an edge case which breaks my logic! My Trie class can locate "this", "that", "those" pathways; it fails if I give "tho" as an input. Let me rethink this out***
+Check UPDATES section for my implementation fix
 
 ## Motivation
 
@@ -105,6 +105,27 @@ traverse trie: [o]
 valid_phrase_indices: [4]
 ```
 
-When I take a step back, I notice something interesting: as you're closer to [root], the set of indices is larger. As you're farther from [root], you're set becomes smaller. In other words, the searching list_of_phrases becomes smaller as your move farther from [root]. This makes sense, as your searching and creating subsets as your traverse this trie.
+When I take a step back, I notice something interesting: as you're closer to [root], the set of indices is larger. As you're farther from [root], you're set of indices becomes smaller. In other words, the searching list_of_phrases becomes smaller as your move farther from [root]. This makes sense; your searching and creating subsets as you traverse the trie.
 
 ***more to come; I'll be adding more information, and will code up a solution***
+
+## UPDATES ##
+
+I found an edge case which broke my inital trie implementation. As test cases, I was providing complete words into the trie. My implementation broke with an partial word input:
+
+```
+input: "those"
+output: input is found in the trie
+
+input: "tho"
+output: input is not found in the trie
+```
+
+"tho" is a subset of the string "those", which then should be found. This is important; when you're traversing the trie against a user input, you want to be able to retreive valid_phrase_indices. 
+
+I added a test in the search method:
+
+```
+if current_level == key_length:
+   input is valid
+```
